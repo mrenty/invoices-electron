@@ -246,6 +246,9 @@ button[type=button]:focus {
   border: 0;
   color: #fff;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   width: 49%;
 }
 .print:hover,
