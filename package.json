@@ -6,7 +6,8 @@
   "main": "main.js",
   "license": "ISC",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-osx": "electron-packager . Invoices --overwrite --out=dist --ignore='^/dist$' --asar --platform=darwin --arch=x64 --version=$version  --icon=./assets/icon.icns"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,12 +18,13 @@
     "demo"
   ],
   "devDependencies": {
-    "electron": "^1.4.1",
     "babel": "5.8.23",
     "babelify": "6.4.0",
     "browser-sync": "2.9.11",
     "browserify": "11.2.0",
     "connect-history-api-fallback": "1.1.0",
+    "electron": "^1.4.1",
+    "electron-packager": "^8.2.0",
     "gulp": "3.9.0",
     "gulp-autoprefixer": "3.1.0",
     "gulp-notify": "2.2.0",
