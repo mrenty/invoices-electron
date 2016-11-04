@@ -1,0 +1,658 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: 700;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: 2 1 C 2 1 D 2 18 2 19;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body,
+figure {
+  margin: 0;
+}
+legend,
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+b,
+strong {
+  font-weight: normal;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.task-enter {
+  opacity: 0;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.task-enter.task-enter-active {
+  opacity: 1;
+}
+.task-leave {
+  opacity: 1;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.task-leave.task-leave-active {
+  opacity: 0;
+}
+@font-face {
+  font-family: 'hattori-hanzo';
+  src: url("./Hattori_Hanzo-webfont.eot");
+  src: url("./Hattori_Hanzo-webfont.eot?#iefix") format('embedded-opentype'), url("./Hattori_Hanzo-webfont.woff") format('woff'), url("./Hattori_Hanzo-webfont.ttf") format('truetype'), url("./Hattori_Hanzo-webfont.svg#hattori_hanzolight") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+textarea {
+  background: transparent;
+  border: 1px solid #7c8f9e;
+  color: #7c8f9e;
+  display: block;
+  margin-bottom: 10px;
+  max-width: 100%;
+  padding: 0.8em 0.5em;
+  -webkit-transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s;
+  width: 100%;
+}
+input:focus,
+textarea:focus {
+  border-color: #fff;
+  box-shadow: 0 0 10px 1px rgba(255,255,255,0.3);
+  color: #fff;
+  outline: none;
+}
+button {
+  background: #7c8f9e;
+  border: 0;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  padding: 0.8em 0.5em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 100%;
+}
+button[disabled] {
+  opacity: 0.5;
+}
+button[disabled]:hover {
+  background: #7c8f9e;
+  color: #fff;
+}
+button:hover,
+button[type=submit]:focus {
+  background: #fff;
+  color: #7c8f9e;
+  outline: none;
+}
+button[type=button]:focus {
+  outline: none;
+}
+.form__message {
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+.form__message--error {
+  color: #f44336;
+}
+.print {
+  background-color: #e91e63;
+  border: 0;
+  color: #fff;
+  margin: 0;
+  width: 49%;
+}
+.print:hover,
+.print:focus {
+  background-color: #d81b60;
+  color: #fff;
+}
+.document {
+  color: #262a33;
+  padding-bottom: 175px;
+}
+.invoice__header {
+  background-color: #e8e9ee;
+  color: #262a33;
+  padding: 60px 60px 8px;
+}
+.invoice__logo {
+  margin-bottom: 50px;
+}
+.invoice__contact-info {
+  background-image: url("images/arrows.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 90px;
+  overflow: hidden;
+  width: 100%;
+}
+.invoice__sender {
+  float: left;
+  width: 50%;
+}
+.invoice__client {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+.invoice__name {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  text-align: inherit;
+}
+.invoice__header p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+.invoice__meta {
+  background: #e8e9ee;
+  overflow: hidden;
+  padding: 42px 0 0 60px;
+}
+.invoice__meta__data {
+  float: left;
+}
+.invoice__docnr {
+  display: block;
+  font-size: 18px;
+}
+.invoice__date {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+}
+.invoice__total {
+  background-color: #262a33;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  height: 56px;
+  line-height: 56px;
+  padding: 10px 10px 10px 25px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+.invoice__total--large {
+  display: inline-block;
+  float: right;
+  font-size: 26px;
+  height: auto;
+  margin-right: 60px;
+  padding: 50px 10px 10px;
+  position: relative;
+  right: auto;
+  top: auto;
+}
+.invoice__total__label {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  right: 10px;
+  text-transform: uppercase;
+  top: 10px;
+}
+.invoice__total--large .invoice__total__label {
+  font-size: 12px;
+  left: 10px;
+  position: absolute;
+  right: auto;
+  text-transform: uppercase;
+  top: 10px;
+}
+.invoice__table {
+  margin-bottom: 60px;
+  width: 100%;
+}
+.invoice__table thead {
+  background-color: #e8e9ee;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.invoice__table thead th {
+  padding: 14px 0;
+  text-align: right;
+  width: 10%;
+}
+.invoice__table thead th:first-child {
+  padding-left: 60px;
+  text-align: left;
+  width: 55%;
+}
+.invoice__table thead th:last-child {
+  padding-right: 60px;
+  width: 25%;
+}
+.invoice__table tbody {
+  font-size: 14px;
+  text-align: right;
+}
+.invoice__table tbody tr {
+  border-bottom: 1px solid #e8e9ee;
+}
+.invoice__table tbody td {
+  padding: 26px 0;
+  position: relative;
+}
+.invoice__table tbody td:first-child {
+  padding-left: 60px;
+  text-align: left;
+}
+.invoice__table tbody td:last-child {
+  padding-right: 60px;
+}
+.invoice__task {
+  display: block;
+  font-size: 18px;
+}
+.invoice__remove {
+  background: none;
+  background-image: url("images/cancel.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border: 0;
+  display: block;
+  height: 42px;
+  left: 9px;
+  margin: 0;
+  position: absolute;
+  width: 42px;
+  text-indent: -9999px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.invoice__remove:hover {
+  background: none;
+  background-image: url("images/cancel.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+.invoice__footer {
+  bottom: 0;
+  height: 175px;
+  padding: 0 60px;
+  position: absolute;
+  width: 100%;
+}
+.invoice__calculation {
+  background-color: #e8e9ee;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+}
+.invoice__calculation__item {
+  display: block;
+  float: left;
+  font-size: 14px;
+}
+.invoice__calculation__label {
+  display: block;
+  font-size: 12px;
+}
+.invoice__calculation__addition {
+  background-image: url("images/add.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  display: block;
+  float: left;
+  height: 36px;
+  width: 50px;
+}
+.invoice__disclaimer {
+  border-bottom: 2px solid #e8e9ee;
+  font-size: 12px;
+  margin: 0;
+  padding: 14px 0;
+}
+.invoice__disclaimer span {
+  font-weight: bold;
+}
+@media print {
+  .invoice__table {
+    width: 100vw;
+  }
+  .invoice__table thead th {
+    width: 10vw;
+  }
+  .invoice__table thead th:first-child {
+    width: 55vw;
+  }
+  .invoice__table thead th:last-child {
+    width: 25vw;
+  }
+  .invoice__remove {
+    display: none;
+  }
+}
+.react-tabs [role=tablist] {
+  background: none;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-directiom: column;
+  margin-bottom: 40px;
+}
+.react-tabs [role=tab] {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #e91e63;
+  border-radius: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 10px 0;
+  text-align: center;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.react-tabs [role=tab]:hover,
+.react-tabs [role=tab]:focus {
+  box-shadow: none;
+  color: #fff;
+  outline: none;
+}
+.react-tabs [role=tab]:hover::after,
+.react-tabs [role=tab]:focus::after {
+  display: none;
+}
+.react-tabs [role=tab][aria-selected=true] {
+  background: #e91e63;
+  border: 0;
+  border-bottom: 2px solid #e91e63;
+  border-radius: 0;
+  color: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+h1 {
+  font-family: 'hattori-hanzo', sans-serif;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+h2 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+h3 {
+  font-size: 3rem;
+}
+body {
+  background: #f6f6f6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+}
+.sidebar {
+  background: #020204;
+  background: -webkit-linear-gradient(#020204, #5b7687);
+  background: linear-gradient(#020204, #5b7687);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  float: left;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 20px;
+  position: relative;
+  width: 30%;
+}
+.react-tabs {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.sidebar__actions {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.task-form {
+  margin: 0 auto;
+}
+.preview {
+  display: block;
+  float: left;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 20px;
+  width: 70%;
+}
+.document {
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin: 0 auto;
+  min-height: 1329px;
+  position: relative;
+  width: 960px;
+}
+@media print {
+  .sidebar {
+    display: none;
+  }
+  .preview {
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: visible;
+    width: 100%;
+  }
+  .document {
+    box-shadow: none;
+    min-height: 100vh;
+    width: 100vw;
+  }
+}
+.print-preview .sidebar {
+  display: none;
+}
+.print-preview .preview {
+  padding: 0;
+  height: auto;
+  min-height: 100vh;
+  overflow-y: visible;
+  width: 100%;
+}
+.print-preview .document {
+  box-shadow: none;
+  min-height: 100vh;
+  width: 100%;
+}
+.print-preview #__bs_notify__ {
+  display: none;
+}
+.print-preview .invoice__table {
+  width: 100%;
+}
+.print-preview .invoice__table thead th {
+  width: 10%;
+}
+.print-preview .invoice__table thead th:first-child {
+  width: 55%;
+}
+.print-preview .invoice__table thead th:last-child {
+  width: 25%;
+}
+.print-preview .invoice__remove {
+  display: none;
+}
