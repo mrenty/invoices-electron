@@ -65,7 +65,6 @@ class Sidebar extends React.Component {
         scaledCanvas.style.width = originalWidth + 'px';
         scaledCanvas.style.height = originalHeight + 'px';
 
-        scaledContext.imageSmoothingEnabled = false;
         scaledContext.mozImageSmoothingEnabled = false;
         scaledContext.imageSmoothingEnabled = false;
         scaledContext.scale(2, 2);
