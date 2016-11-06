@@ -9,8 +9,9 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
+app.setName('Invoices')
 app.setAboutPanelOptions({
-    applicationName: 'Invoices',
+    applicationName: app.getName(),
     applicationVersion: app.getVersion()
 })
 
@@ -51,6 +52,18 @@ function createMenu() {
                 {
                     label: 'About Invoices',
                     role: 'about'
+                },
+                {
+                    type: 'separator'
+                },
+                {
+                    role: 'hide'
+                },
+                {
+                    role: 'hideothers'
+                },
+                {
+                    type: 'separator'
                 },
                 {
                     label: 'Reload',
