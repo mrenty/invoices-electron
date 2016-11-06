@@ -77,7 +77,7 @@ function createMenu() {
                 },
                 {
                     label: 'Quit',
-                    accelerator: process.platform === 'darwin' ? 'Command+Q' : 'Ctrl+Q',
+                    accelerator: 'CmdOrCtrl+Q',
                     click: function () {
                         app.quit();
                     }
