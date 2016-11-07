@@ -14,7 +14,6 @@ var buffer = require('vinyl-buffer');
 
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
-var historyApiFallback = require('connect-history-api-fallback')
 
 gulp.task('styles',function() {
 
@@ -31,14 +30,6 @@ gulp.task('styles',function() {
 gulp.task('images',function(){
   gulp.src('css/images/**')
       .pipe(gulp.dest('./build/css/images'))
-});
-
-gulp.task('browser-sync', function() {
-  browserSync({
-    server : {},
-    middleware : [ historyApiFallback() ],
-    ghostMode: false
-  });
 });
 
 function handleErrors() {
@@ -85,7 +76,7 @@ gulp.task('scripts', function() {
   return buildScript('main.js', false);
 });
 
-gulp.task('default', ['images','styles','scripts','browser-sync'], function() {
+gulp.task('default', ['images','styles','scripts'], function() {
   gulp.watch('css/**/*', ['styles']);
   return buildScript('main.js', true);
 });
