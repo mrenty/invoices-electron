@@ -12,9 +12,6 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var buffer = require('vinyl-buffer');
 
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-
 gulp.task('styles',function() {
 
   gulp.src('css/fonts/**.*')
@@ -24,7 +21,6 @@ gulp.task('styles',function() {
       .pipe(stylus())
       .pipe(autoprefixer())
       .pipe(gulp.dest('./build/css/'))
-      .pipe(reload({stream:true}))
 });
 
 gulp.task('images',function(){
@@ -61,7 +57,6 @@ function buildScript(file, watch) {
         // .pipe(uglify())
         // .pipe(rename('app.min.js'))
         // .pipe(gulp.dest('./build'))
-        .pipe(reload({stream:true}))
   }
 
   bundler.on('update', function() {
