@@ -1,6 +1,5 @@
 var source = require('vinyl-source-stream');
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var watchify = require('watchify');
@@ -61,7 +60,6 @@ function buildScript(file, watch) {
 
   bundler.on('update', function() {
     rebundle();
-    gutil.log('Rebundle...');
   });
 
   return rebundle();
