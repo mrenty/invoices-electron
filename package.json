@@ -7,7 +7,9 @@
   "license": "ISC",
   "scripts": {
     "start": "electron .",
-    "build-osx": "electron-packager . Invoices --overwrite --out=dist --ignore='^/dist$' --asar --platform=darwin --arch=x64 --version=$version  --icon=./assets/icon.icns"
+    "clean": "rm -rf ./dist",
+    "build-osx": "electron-packager . Invoices --overwrite --out=dist --ignore='^/dist$' --asar --platform=darwin --arch=x64 --version=$version  --icon=./assets/icon.icns",
+    "build-win": "electron-packager . Invoices --overwrite --out=dist --ignore='^/dist$' --asar --platform=win32 --arch=x64 --version=$version  --icon=./assets/icon.ico"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [

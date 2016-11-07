@@ -10,4 +10,4 @@ To run the app for development run `npm run start`.
 
 ### Package the app
 
-To build the app (currently MacOS only) run `npm run build-osx`.
+To build the app run `npm run build-osx` for MacOS or `npm run build-win` for Windows.
