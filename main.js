@@ -101,14 +101,14 @@ function createMenu() {
                     label: 'Save',
                     accelerator: 'CmdOrCtrl+S',
                     click: function () {
-                        mainWindow.webContents.send('save');
+                        mainWindow.webContents.send('save', 'save');
                     }
                 },
                 {
                     label: 'Sync to Drive',
                     accelerator: 'CmdOrCtrl+Shift+S',
                     click: function () {
-                        mainWindow.webContents.send('sync');
+                        mainWindow.webContents.send('save', 'gcp');
                     }
                 },
             ]
@@ -165,6 +165,3 @@ app.on('activate', function () {
         createWindow()
     }
 })
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.

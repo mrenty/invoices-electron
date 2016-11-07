@@ -98,8 +98,9 @@ class Sidebar extends React.Component {
         document.body.classList.remove('print-preview');
     }
     componentDidMount() {
-        ipcRenderer.on('save', this.saveToComputer);
-        ipcRenderer.on('sync', this.syncToDrive);
+        ipcRenderer.on('save', (event, arg) => {
+            this.save(arg);
+        });
     }
     render() {
         return (
