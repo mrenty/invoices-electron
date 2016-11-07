@@ -32,7 +32,7 @@ class AddTaskForm extends React.Component {
         return (
             <form className="task-form" ref="taskForm" onSubmit={this.createTask}>
                 <input type="text" ref="name" placeholder="Name" />
-                <textarea type="text" ref="desc" placeholder="Desc"></textarea>
+                <textarea type="text" ref="desc" placeholder="Description"></textarea>
                 <input type="text" ref="rate" placeholder="Rate" />
                 <input type="text" ref="hours" placeholder="Hours" />
                 <button type="submit">+ Add Task</button>
