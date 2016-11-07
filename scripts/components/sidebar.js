@@ -10,6 +10,7 @@ import MetaForm from './meta-form';
 import ClientForm from './client-form';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+const ipcRenderer = window.require('electron').ipcRenderer;
 
 class Sidebar extends React.Component {
     constructor(props) {
@@ -95,6 +96,10 @@ class Sidebar extends React.Component {
         element.style.width = cache_width;
 
         document.body.classList.remove('print-preview');
+    }
+    componentDidMount() {
+        ipcRenderer.on('save', this.saveToComputer);
+        ipcRenderer.on('sync', this.syncToDrive);
     }
     render() {
         return (

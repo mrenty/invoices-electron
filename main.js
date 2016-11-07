@@ -95,6 +95,25 @@ function createMenu() {
             ]
         },
         {
+            label: 'File',
+            submenu: [
+                {
+                    label: 'Save',
+                    accelerator: 'CmdOrCtrl+S',
+                    click: function () {
+                        mainWindow.webContents.send('save');
+                    }
+                },
+                {
+                    label: 'Sync to Drive',
+                    accelerator: 'CmdOrCtrl+Shift+S',
+                    click: function () {
+                        mainWindow.webContents.send('sync');
+                    }
+                },
+            ]
+        },
+        {
             role: 'window',
             submenu: [
                 {
