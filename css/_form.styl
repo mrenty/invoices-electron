@@ -9,16 +9,23 @@ input, textarea
   transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s
   width: 100%
 
-input:focus, textarea:focus {
+input:focus, textarea:focus
   border-color: white
   box-shadow: 0 0 10px 1px rgba(255,255,255,0.3)
   color: white
   outline: none
-}
+
+input[type=checkbox]
+  display: inline-block;
+  margin-right: 0.5em;
+  width: auto;
+
+label
+  font-size: 1.2rem;
 
 button
-  background #7c8f9e
-  border 0
+  background: #7c8f9e
+  border: 0
   color: white
   display: block
   margin-bottom: 10px

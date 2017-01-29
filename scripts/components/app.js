@@ -32,6 +32,7 @@ class App extends React.Component{
         this.updateMeta = this.updateMeta.bind(this);
         this.updateClient = this.updateClient.bind(this);
         this.renderTotal = this.renderTotal.bind(this);
+        this.renderVAT = this.renderVAT.bind(this);
     }
     addTask(task) {
         let timestamp = (new Date()).getTime();
@@ -68,6 +69,24 @@ class App extends React.Component{
             return prevTotal;
         }, 0);
     }
+    renderVAT() {
+        let taskIds = Object.keys(this.state.tasks);
+
+        let totalVAT = taskIds.reduce((prevTotal, key)=> {
+
+            let task = this.state.tasks[key];
+
+            console.log(task);
+
+            if (task && !task.excludeVAT) {
+                return prevTotal + parseFloat(task.totalExcl) || 0;
+            }
+
+            return prevTotal;
+        }, 0);
+
+        return totalVAT * 0.21;
+    }
     render() {
         let companyInfo = require('./../company-info');
         return (
@@ -83,7 +102,7 @@ class App extends React.Component{
                             </div>
                             <div className="invoice__total invoice__total--large">
                                 <span className="invoice__total__label">Total</span>
-                                <strong>{h.formatPrice((this.renderTotal() * 0.21) + this.renderTotal())}</strong>
+                                <strong>{h.formatPrice(this.renderVAT() + this.renderTotal())}</strong>
                             </div>
                         </div>
                         <table className="invoice__table">
@@ -108,11 +127,11 @@ class App extends React.Component{
                                 <div className="invoice__calculation__addition"></div>
                                 <div className="invoice__calculation__item">
                                     <span className="invoice__calculation__label">VAT</span>
-                                    <b>{h.formatPrice(this.renderTotal() * 0.21)}</b>
+                                    <b>{h.formatPrice(this.renderVAT())}</b>
                                 </div>
                                 <div className="invoice__total">
                                     <span className="invoice__total__label">Total</span>
-                                    <strong>{h.formatPrice((this.renderTotal() * 0.21) + this.renderTotal())}</strong>
+                                    <strong>{h.formatPrice(this.renderVAT() + this.renderTotal())}</strong>
                                 </div>
                             </div>
                             <p className="invoice__disclaimer">Please transfer the amount within 30 days <span>IBAN {companyInfo.basic.bankAccountNumber}</span>.</p>

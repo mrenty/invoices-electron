@@ -11,9 +11,9 @@ let helpers = {
     },
     getToday: function () {
         const today = new Date();
+        const yyyy = today.getFullYear();
         let dd = today.getDate();
         let mm = today.getMonth()+1;
-        const yyyy = today.getFullYear();
 
         if(dd<10){
             dd='0'+dd

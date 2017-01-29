@@ -21,7 +21,8 @@ class AddTaskForm extends React.Component {
             rate: rate,
             hours: this.refs.hours.value,
             totalExcl: hours * rate,
-            vat: hours * vat
+            vat: hours * vat,
+            excludeVAT: this.refs.excludeVAT.checked
         };
 
         this.props.addTask(task);
@@ -35,6 +36,7 @@ class AddTaskForm extends React.Component {
                 <textarea type="text" ref="desc" placeholder="Description"></textarea>
                 <input type="text" ref="rate" placeholder="Rate" />
                 <input type="text" ref="hours" placeholder="Hours" />
+                <label><input type="checkbox" ref="excludeVAT"/>Exclude VAT</label>
                 <button type="submit">+ Add Task</button>
             </form>
         )
