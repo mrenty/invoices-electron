@@ -1,43 +1,43 @@
-const electron = require('electron')
+const electron = require('electron');
 // Module to control application life.
-const app = electron.app
+const app = electron.app;
 // Module to control the menu.
-const Menu = electron.Menu
+const Menu = electron.Menu;
 // Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
+const BrowserWindow = electron.BrowserWindow;
 
-const path = require('path')
-const url = require('url')
+const path = require('path');
+const url = require('url');
 
-app.setName('Invoices')
+app.setName('Invoices');
 app.setAboutPanelOptions({
     applicationName: app.getName(),
     applicationVersion: app.getVersion()
-})
+});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+let mainWindow;
 
 function createWindow() {
     // Create the browser window.
-    mainWindow = new BrowserWindow()
+    mainWindow = new BrowserWindow();
 
     // and load the index.html of the app.
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
         slashes: true
-    }))
+    }));
 
-    mainWindow.maximize()
+    mainWindow.maximize();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
         // Dereference the window object, usually you would store windows
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
-        mainWindow = null
+        mainWindow = null;
     })
 }
 
@@ -66,14 +66,18 @@ function createMenu() {
                     label: 'Reload',
                     accelerator: 'CmdOrCtrl+R',
                     click (item, focusedWindow) {
-                        if (focusedWindow) focusedWindow.reload()
+                        if (focusedWindow) {
+                            focusedWindow.reload();
+                        }
                     }
                 },
                 {
                     label: 'Toggle Developer Tools',
                     accelerator: process.platform === 'darwin' ? 'Alt+Command+I' : 'Ctrl+Shift+I',
                     click (item, focusedWindow) {
-                        if (focusedWindow) focusedWindow.webContents.toggleDevTools()
+                        if (focusedWindow) {
+                            focusedWindow.webContents.toggleDevTools();
+                        }
                     }
                 },
                 {
