@@ -14,17 +14,17 @@ var buffer = require('vinyl-buffer');
 gulp.task('styles',function() {
 
   gulp.src('css/fonts/**.*')
-      .pipe(gulp.dest('build/css/fonts'))
+      .pipe(gulp.dest('build/css/fonts'));
   // Compiles CSS
   gulp.src('css/style.styl')
       .pipe(stylus())
       .pipe(autoprefixer())
-      .pipe(gulp.dest('./build/css/'))
+      .pipe(gulp.dest('./build/css/'));
 });
 
 gulp.task('images',function(){
   gulp.src('css/images/**')
-      .pipe(gulp.dest('./build/css/images'))
+      .pipe(gulp.dest('./build/css/images'));
 });
 
 function handleErrors() {
@@ -51,7 +51,7 @@ function buildScript(file, watch) {
     return stream
         .on('error', handleErrors)
         .pipe(source(file))
-        .pipe(gulp.dest('./build/'))
+        .pipe(gulp.dest('./build/'));
         // .pipe(buffer())
         // .pipe(uglify())
         // .pipe(rename('app.min.js'))
