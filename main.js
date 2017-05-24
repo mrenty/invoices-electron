@@ -177,7 +177,7 @@ function createMenu() {
 app.on('ready', function () {
     createWindow();
     createMenu();
-})
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
@@ -186,7 +186,7 @@ app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') {
         app.quit();
     }
-})
+});
 
 app.on('activate', function () {
     // On OS X it's common to re-create a window in the app when the
@@ -194,4 +194,4 @@ app.on('activate', function () {
     if (mainWindow === null) {
         createWindow();
     }
-})
+});
